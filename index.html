@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CodeUp.kz — Mini Content Calendar (Euler Circle Method)</title>
+<style>
+:root{
+  --bg:#f6f4f1; --card:#ffffff; --ink:#1c1b1a; --sub:#6b6560;
+  --accent:#5b5bd6; --accent2:#e8734a; --accent3:#1fa66a; --line:#e7e3dd;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#15141a; --card:#1f1e24; --ink:#f3f1ee; --sub:#a7a29c; --line:#33313a; }
+}
+:root[data-theme="dark"]{ --bg:#15141a; --card:#1f1e24; --ink:#f3f1ee; --sub:#a7a29c; --line:#33313a; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:36px 18px 64px;line-height:1.55}
+.wrap{max-width:820px;margin:0 auto}
+h1{font-size:1.7rem;margin:0 0 4px;font-weight:700;letter-spacing:-.01em}
+.sub{color:var(--sub);font-size:.95rem;margin:0 0 30px}
+h2{font-size:.78rem;margin:40px 0 12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+p{margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.euler{display:flex;justify-content:center;margin:10px 0}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--sub);font-weight:600;text-transform:uppercase;font-size:.7rem;letter-spacing:.04em}
+.post{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start}
+@media(max-width:620px){.post{grid-template-columns:1fr}}
+.igcard{width:260px;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.igcard .igtop{display:flex;align-items:center;gap:8px;padding:9px 10px;background:#fff}
+.igavatar{width:26px;height:26px;border-radius:50%;flex:none}
+.igname{font-size:.76rem;font-weight:700;color:#1c1b1a}
+.igsquare{width:260px;height:260px;position:relative}
+.igbottom{display:flex;align-items:center;gap:12px;padding:9px 10px;background:#fff}
+.igbottom svg{width:19px;height:19px}
+.igbottom .spacer{flex:1}
+.iglikes{padding:0 10px 10px;font-size:.74rem;font-weight:700;color:#1c1b1a;background:#fff}
+.tag{display:inline-block;font-size:.72rem;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--sub);margin:0 6px 6px 0}
+.caption{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.88rem;margin:10px 0}
+.strategy{font-size:.87rem;color:var(--sub)}
+.strategy b{color:var(--ink)}
+footer{margin-top:44px;font-size:.78rem;color:var(--sub);text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>CodeUp.kz — Mini Content Calendar</h1>
+<p class="sub">Instagram · 3 posts built with the Euler Circle Method</p>
+
+<h2>The Method</h2>
+<div class="card">
+<p>Three circles — <b style="color:var(--accent)">Business goals</b>, <b style="color:var(--accent2)">Audience needs</b>, and <b style="color:var(--accent3)">Trending formats</b> — overlap. Each post sits where two or three circles intersect, so it serves the brand, the audience, and the platform's attention patterns at once.</p>
+<div class="euler">
+<svg viewBox="0 0 320 220" width="300" height="210">
+  <circle cx="130" cy="90" r="80" fill="var(--accent)" opacity="0.35"/>
+  <circle cx="190" cy="90" r="80" fill="var(--accent2)" opacity="0.35"/>
+  <circle cx="160" cy="150" r="80" fill="var(--accent3)" opacity="0.35"/>
+  <text x="75" y="55" fill="var(--ink)" font-size="12">Business</text>
+  <text x="215" y="55" fill="var(--ink)" font-size="12">Audience</text>
+  <text x="130" y="205" fill="var(--ink)" font-size="12">Trend</text>
+  <text x="150" y="120" fill="var(--ink)" font-size="11" font-style="italic">sweet spot</text>
+</svg>
+</div>
+</div>
+
+<h2>Calendar</h2>
+<div class="card">
+<table>
+<tr><th>Date</th><th>Post</th><th>Intersection</th><th>Format</th></tr>
+<tr><td>Mon</td><td>1. "3 signs you're ready to code"</td><td>Business + Audience</td><td>Carousel</td></tr>
+<tr><td>Wed</td><td>2. "POV: your first console.log()"</td><td>Audience + Trend</td><td>Reel (meme/POV)</td></tr>
+<tr><td>Fri</td><td>3. "5 spots left — Web Dev Starter"</td><td>Business + Trend</td><td>Reel (countdown)</td></tr>
+</table>
+</div>
+
+<h2>Post 1 — Educational</h2>
+<div class="card post">
+<div class="igcard">
+  <div class="igtop"><svg class="igavatar" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" fill="#5b5bd6"/><text x="13" y="17" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">C</text></svg><span class="igname">codeup.kz</span></div>
+  <svg class="igsquare" viewBox="0 0 260 260">
+    <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6a6ae0"/><stop offset="100%" stop-color="#2e2e9e"/></linearGradient></defs>
+    <rect width="260" height="260" fill="url(#g1)"/>
+    <circle cx="35" cy="35" r="60" fill="#fff" opacity="0.06"/>
+    <circle cx="235" cy="235" r="80" fill="#fff" opacity="0.06"/>
+    <rect x="70" y="65" width="120" height="100" rx="14" fill="#fff" opacity="0.12"/>
+    <text x="130" y="110" text-anchor="middle" fill="#fff" font-size="30" font-family="monospace" font-weight="700">&lt;/&gt;</text>
+    <circle cx="92" cy="138" r="6" fill="#9effb0"/><text x="105" y="142" fill="#fff" font-size="11">логика</text>
+    <circle cx="92" cy="156" r="6" fill="#9effb0"/><text x="105" y="160" fill="#fff" font-size="11">қызығу</text>
+    <text x="130" y="205" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">3 SIGNS</text>
+    <text x="130" y="224" text-anchor="middle" fill="#fff" font-size="11" opacity="0.85">сен дайынсың ба?</text>
+    <text x="130" y="244" text-anchor="middle" fill="#fff" font-size="10" opacity="0.7">Swipe → · 1/5</text>
+  </svg>
+  <div class="igbottom">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    <span class="spacer"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+  </div>
+  <div class="iglikes">❤ 428 ұнатулар</div>
+</div>
+<div>
+<span class="tag">Carousel · 5 slides</span><span class="tag">Business + Audience</span>
+<div class="caption">Ты гуглишь "как начать программировать" уже третий раз за месяц? 👀<br>Вот 3 знака, что пора перестать откладывать — и начать с CodeUp.kz.<br>Листай карусель →<br>#CodeUpKz #ПрограммированиеСНуля #IT</div>
+<p class="strategy"><b>Goal:</b> position CodeUp.kz as the obvious next step for hesitant beginners.<br><b>KPI:</b> saves + profile visits.<br><b>Why it works:</b> speaks to the audience's hesitation while ending on a clear course CTA.</p>
+</div>
+</div>
+
+<h2>Post 2 — Relatable / Trend-driven</h2>
+<div class="card post">
+<div class="igcard">
+  <div class="igtop"><svg class="igavatar" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" fill="#e8734a"/><text x="13" y="17" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">C</text></svg><span class="igname">codeup.kz</span></div>
+  <svg class="igsquare" viewBox="0 0 260 260">
+    <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0895f"/><stop offset="100%" stop-color="#a8461f"/></linearGradient></defs>
+    <rect width="260" height="260" fill="url(#g2)"/>
+    <circle cx="230" cy="30" r="70" fill="#fff" opacity="0.06"/>
+    <text x="130" y="55" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">POV:</text>
+    <text x="130" y="76" text-anchor="middle" fill="#fff" font-size="12" opacity="0.9">твой первый console.log()</text>
+    <rect x="45" y="95" width="170" height="95" rx="10" fill="#1c1b1a"/>
+    <circle cx="58" cy="107" r="4" fill="#e8734a"/><circle cx="70" cy="107" r="4" fill="#f2b705"/><circle cx="82" cy="107" r="4" fill="#2fa66a"/>
+    <text x="58" y="135" fill="#9effb0" font-size="12" font-family="monospace">Hello, World!</text>
+    <text x="58" y="155" fill="#9effb0" font-size="20">😭🔥</text>
+    <rect x="80" y="205" width="100" height="22" rx="11" fill="#fff" opacity="0.18"/>
+    <text x="130" y="220" text-anchor="middle" fill="#fff" font-size="10">♪ trending audio</text>
+  </svg>
+  <div class="igbottom">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    <span class="spacer"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+  </div>
+  <div class="iglikes">❤ 1 203 ұнатулар</div>
+</div>
+<div>
+<span class="tag">Reel · 15s</span><span class="tag">Audience + Trend</span>
+<div class="caption">Тот момент, когда "Hello, World!" выводится с первого раза 😭🔥<br>Отметь того, кто поймёт.<br>#CodeUpKz #DevLife #ЮморПрограммистов</div>
+<p class="strategy"><b>Goal:</b> boost reach and comments via shareable, low-pressure humor — no hard sell.<br><b>KPI:</b> shares + comment tags.<br><b>Why it works:</b> rides a trending Reel format around a moment every learner recognizes; builds affinity before the promo post.</p>
+</div>
+</div>
+
+<h2>Post 3 — Promotional</h2>
+<div class="card post">
+<div class="igcard">
+  <div class="igtop"><svg class="igavatar" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" fill="#1fa66a"/><text x="13" y="17" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">C</text></svg><span class="igname">codeup.kz</span></div>
+  <svg class="igsquare" viewBox="0 0 260 260">
+    <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#36c285"/><stop offset="100%" stop-color="#17663f"/></linearGradient></defs>
+    <rect width="260" height="260" fill="url(#g3)"/>
+    <circle cx="30" cy="230" r="70" fill="#fff" opacity="0.06"/>
+    <circle cx="130" cy="108" r="55" fill="#fff" opacity="0.1"/>
+    <circle cx="130" cy="108" r="55" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="220 350"/>
+    <text x="130" y="122" text-anchor="middle" fill="#fff" font-size="46" font-weight="700">5</text>
+    <text x="130" y="178" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">ОРЫН ҚАЛДЫ</text>
+    <text x="130" y="200" text-anchor="middle" fill="#fff" font-size="12" opacity="0.9">Web Dev Starter</text>
+    <rect x="75" y="212" width="110" height="24" rx="12" fill="#fff" opacity="0.2"/>
+    <text x="130" y="228" text-anchor="middle" fill="#fff" font-size="10">старт осы аптада</text>
+  </svg>
+  <div class="igbottom">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    <span class="spacer"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+  </div>
+  <div class="iglikes">❤ 756 ұнатулар</div>
+</div>
+<div>
+<span class="tag">Reel · countdown</span><span class="tag">Business + Trend</span>
+<div class="caption">Курс Web Dev Starter стартует на этой неделе — осталось 5 мест 🚨<br>Первый сайт своими руками за 6 недель. Ссылка в шапке профиля.<br>#CodeUpKz #WebDevStarter #УчисьOnline</div>
+<p class="strategy"><b>Goal:</b> convert warmed-up followers from posts 1–2 into enrollments before the cohort closes.<br><b>KPI:</b> link clicks + DMs.<br><b>Why it works:</b> uses a trending urgency/countdown format to push a direct enrollment goal.</p>
+</div>
+</div>
+
+<footer>CodeUp.kz · SMM mini calendar · Euler Circle Method</footer>
+</div>
+</body>
+</html>
